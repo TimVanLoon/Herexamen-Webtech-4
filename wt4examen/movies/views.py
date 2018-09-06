@@ -16,7 +16,11 @@ class Movie(object):
 
 def index(request):
     if request.method == 'POST':
-        return render(request, 'movies/index.html', None)
+        keys = r.keys("movies:" + movie_title)
+        movieslist = []
+        for key in keys:
+            movieslist.append(Movie(key, r.hgetall(key)))
+        return render(request, 'movies/index.html', {'movies': movieslist})
     else:
         keys = r.keys("movies:*")
         movieslist = []
@@ -24,3 +28,10 @@ def index(request):
             movieslist.append(Movie(key, r.hgetall(key)))
         return render(request, 'movies/index.html', {'movies': movieslist})
         
+def movie(request, movie_title):
+    keys = r.keys("movies:" + movie_title)
+    keys = r.keys("movies:" + movie_title)
+    movieslist = []
+    for key in keys:
+            movieslist.append(Movie(key, r.hgetall(key)))
+    return render(request, 'movies/index.html', {'movies': movieslist})

@@ -1,0 +1,6 @@
+HMSET "movies:The Big Lebowski" "actor1" "Julianne Moore" "actor2" "Jeff Bridges" "actor3" "Tara Reid"
+HMSET "movies:Casablanca" "actor1" "Ingrid Bergman" "actor2" "Humphrey Bogart" "actor3" "Peter Lorre"
+HMSET "movies:Saving Private Ryan" "actor1" "Tom Hanks" "actor2" "Matt Damon" "actor3" "Vin Diesel"
+HMSET "movies:Schindler's List" "actor1" "Liam Neeson" "actor2" "Ralph Fiennes" "actor3" "Ben Kingsley"
+HMSET "movies:The Godfather" "actor1" "Al Pacino" "actor2" "Marlon Brando" "actor3" "Robert Duvall"
+HMSET "movies:Back to the Future" "actor1" "Michael J. Fox" "actor2" "Christopher Lloyd" "actor3" "Lea Thompson"

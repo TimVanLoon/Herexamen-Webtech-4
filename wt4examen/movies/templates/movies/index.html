@@ -1,0 +1,14 @@
+<h1>Movies</h1>
+{% if movies %}
+<ul>
+{% for movie in movies %}
+    <li>{{ movie.title }}</a>
+        <ul>
+            {{ movie.actors }}
+        </ul>
+    </li>
+{% endfor %}
+</ul>
+{% else %}
+<p>No movies are available</p>
+{% endif %}
